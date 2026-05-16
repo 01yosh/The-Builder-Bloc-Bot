@@ -9,7 +9,7 @@ class Moderation(commands.Cog):
     # Helper: check if user is a mod
     def is_mod():
         async def predicate(ctx):
-            return any(role.name in ['Moderator', 'Senior Moderator', 'Core Team', 'Founder']
+            return any(role.name in ['Moderator', 'Senior Moderator', 'Core Team', 'Founder', 'FOUNDER']
                       for role in ctx.author.roles)
         return commands.check(predicate)
 
