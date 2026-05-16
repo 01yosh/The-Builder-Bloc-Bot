@@ -41,5 +41,13 @@ async def on_ready():
         )
     )
 
+# Slash command example
+@bot.tree.command(name="ping", description="Check if bot is alive")
+async def ping(interaction: discord.Interaction):
+    latency = round(bot.latency * 1000)
+    await interaction.response.send_message(
+        f"🏓 Pong! Bot latency: **{latency}ms**",
+        ephemeral=True  # Only visible to the user who ran it
+    )
 # Run the bot
 bot.run(TOKEN)
