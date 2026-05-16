@@ -10,7 +10,7 @@ class Utility(commands.Cog):
     @commands.command()
     async def help(self, ctx):
         embed = discord.Embed(
-            title="📋 [Community Name] Bot — Commands",
+            title="📋 The Builder Bloc Bot — Commands",
             color=0x6C63FF
         )
         embed.add_field(
